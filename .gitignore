@@ -1,3 +1,4 @@
 node_modules/
 bin/
 blocked-list.txt
+config.json
