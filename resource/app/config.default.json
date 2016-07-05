@@ -1,0 +1,8 @@
+{
+    "socks5": {
+        "host": ""
+        , "port": 22
+        , "user": ""
+        , "password": ""
+    }
+}

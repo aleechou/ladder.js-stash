@@ -1,0 +1,38 @@
+<button class="circular ui icon button small" ng-click="reloadRules()">
+  <i class="icon refresh"></i>
+</button>
+
+
+<div class="ui icon input">
+    <input class="prompt" type="text" placeholder="添加目标主机" ng-model=addingHost ng-enter="addHost(addingHost)">
+    <i class="add icon"></i>
+</div>
+
+<input type="checkbox" ng-model=listLoading >
+
+<table class="small ui very basic compact table" ng-dimmer="listLoading">
+  <thead style="display:block">
+    <tr>
+      <th style="width:200px">目标(域名)</th>
+      <th style="width:100px">流量</th>
+      <th style="width:20px">
+          <i class="delete icon basic" ng-click="deleteAllRule()"></i>
+      </th>
+    </tr>
+  </thead>
+  <tbody style="height:400px;overflow:auto;display:block;">
+    <tr ng-repeat="(ip,item) in redirectHostList">
+      <td style="width:200px">
+          {{ip}} <br>
+          {{item.doname||"--"}}
+      </td>
+      <td style="width:100px">
+          {{item.pkts}} <span style="color:rgb(158, 158, 158);">pkts</span><br>
+          {{item.bytes}} <span style="color:rgb(158, 158, 158);">bytes</span>
+      </td>
+      <td style="width:20px">
+          <i class="delete icon basic" ng-click="deleteRule(ip)"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>

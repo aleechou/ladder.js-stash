@@ -1,0 +1,39 @@
+
+
+SSH/Socks5
+<button class="ui labeled icon button tiny"
+            ng-class="{'loading': actionDoing, 'positive': running}"
+            ng-click="running? stop(): run()">
+    <i class="icon" ng-class="{true:'stop', false:'play'}[running]"></i> {{running?'停止':'开始'}}
+</button>
+
+Port: {{socks5Port}}
+
+
+
+<table class="small ui very basic compact table" ng-dimmer="listLoading">
+  <thead style="display:block">
+    <tr>
+      <th style="width:200px">隧道</th>
+      <th style="width:100px">流量</th>
+      <th style="width:20px">
+          <i class="delete icon basic" ng-click="deleteAllRule()"></i>
+      </th>
+    </tr>
+  </thead>
+  <tbody style="height:400px;overflow:auto;display:block;">
+    <tr ng-repeat="tunnel in tunnelList">
+      <td class="selectable" style="width:200px">
+          {{tunnel.dstHost}} : {{tunnel.dstPort}} <br>
+          {{app.service.dns.revertHostname[ip]||"--"}}
+      </td>
+      <td style="width:100px">
+          {{item.pkts}} <span style="color:rgb(158, 158, 158);">pkts</span><br>
+          {{item.bytes}} <span style="color:rgb(158, 158, 158);">bytes</span>
+      </td>
+      <td style="width:20px">
+          <i class="delete icon basic" ng-click="deleteRule(tunnel)"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>

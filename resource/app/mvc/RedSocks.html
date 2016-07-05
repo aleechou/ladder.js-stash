@@ -1,0 +1,7 @@
+
+RedSocks
+<button class="ui labeled icon button tiny"
+            ng-class="{'loading': actionDoing, 'positive': running}"
+            ng-click="running? stop(): run()">
+    <i class="icon" ng-class="{true:'stop', false:'play'}[running]"></i> {{running?'停止':'开始'}}
+</button>

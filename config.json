@@ -1,0 +1,26 @@
+{
+    "socks5": {
+        "port": 1982
+        , "ssh": {
+            "host": "207.226.141.11"
+            , "port": 22
+            , "user": "root"
+            , "private-key": "/home/alee/.ssh/id_rsa"
+        }
+    }
+
+    , "dns": {
+        "port": 15353
+        , "out-port": 15352
+        , "upstream-servers": [
+            { "address": "114.114.114.114", "port": 15352, "type": "udp" }
+            , { "address": "8.8.8.8", "port": 15352, "type": "udp" }
+            , { "address": "178.79.131.110", "port": 15352, "type": "udp" }
+        ]
+        , "save-upstream-servers": [
+            { "address": "8.8.4.4", "port": 53, "type": "tcp" }
+        ]
+        , "unused": [
+        ]
+    }
+}
