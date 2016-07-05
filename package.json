@@ -1,0 +1,25 @@
+{
+  "name": "ladder.js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "native-dns": "^0.7.0",
+    "request": "^2.72.0",
+    "ssh2": "^0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleechou/ladder.js.git"
+  },
+  "author": "alee chou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aleechou/ladder.js/issues"
+  },
+  "homepage": "https://github.com/aleechou/ladder.js#readme"
+}

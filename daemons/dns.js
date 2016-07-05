@@ -19,7 +19,7 @@ DnsProxy.prototype = {
 
 DnsProxy.loadBlockedListFile = function(path){
     var list = []
-    var blockedListContent = fs.readFileSync(path || __dirname+"/../../../blocked-list.txt")
+    var blockedListContent = fs.readFileSync(path || process.cwd()+"/blocked-list.txt")
     if(blockedListContent) {
         blockedListContent.toString()
             .split(/\s+/).forEach((line)=>{

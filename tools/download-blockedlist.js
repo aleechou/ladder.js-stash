@@ -18,7 +18,7 @@ request("https://raw.githubusercontent.com/koolshare/koolshare.github.io/master/
         blockedList.push(res[1])
     }
 
-    fs.writeFileSync(__dirname+"/blocked-list.txt",blockedList.join("\r\n"))
+    fs.writeFileSync(process.cwd()+"/blocked-list.txt",blockedList.join("\r\n"))
     // console.log(app.service.dns.blockedList)
 
 })
